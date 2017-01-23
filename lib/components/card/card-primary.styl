@@ -1,0 +1,114 @@
+/**  COMPONENTE WRAPER
+ **------------------------------------------*/
+.wrapper
+  display block
+  margin 3.5em auto
+  text-align center
+  width 45em
+
+@media screen and (max-width: 720px)
+  .wrapper
+    padding-right 4%
+    width 96%
+
+/**  COMPONENTE TITLE
+ **------------------------------------------*/
+.title
+  border-bottom 1px solid $grey-300
+  color rgba($grey-800, .70)
+  font-weight 400
+  margin 0
+  padding-bottom .25em
+
+/**  COMPONENTE CARD
+ **------------------------------------------*/
+.card
+.card::after
+  border-radius .125em
+  height $desktop-height
+  width $desktop-width
+
+.card--small
+.card--small::after
+  height $small-height
+  width $small-width
+
+.card
+  MaterialShadow(1)
+  background-color white
+  display inline-block
+  margin 1em 2em 3.5em 1em
+  position relative
+
+  //card azul-INACTIVO
+  &::after
+    background-color $default-primary-color
+    content ''
+    display block
+    left 0
+    opacity .6
+    position absolute
+    top 0
+    transform translate3d(10px, 10px, 0)
+    transition transform .15s linear
+    z-index -1
+
+  //botón por default
+  &__btn
+    background-color transparent
+    border-radius 50%
+    display none
+    height 32px
+    line-height 32px
+    position absolute
+    right 0
+    text-decoration none
+    top .15em
+    transition background-color .2s linear
+    width 32px
+
+    //icono del botón
+    &::before
+      transition transform .2s linear
+      color rgba($grey-800, .87)
+      display block
+      font-size 18px
+      margin auto
+      transform rotate(0deg)
+
+  &__image-container
+    display inline-block
+    height 100%
+    margin 0
+    overflow hidden
+    width $img-width
+    &--small
+      width $small-img-width
+
+  &__image
+    border-radius 2px 0 0 2px
+    width 100%
+
+@media screen and (max-width: 1024px)
+  .card__btn
+    display block
+
+@media screen and (max-width: 720px)
+  .card
+  .card::after
+    height $mobile-height
+    width $mobile-width
+
+  .card--small
+  .card--small::after
+    height $small-height
+    width $small-width
+
+@media screen and (max-width: 560px)
+  .card
+    display block
+    margin 1em auto 3.5em auto
+
+@media screen and (max-width: 410px)
+  .card::after
+    transform translate3d(14px, 10px, 0)

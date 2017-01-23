@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang='es')
+  head
+    //-METATAGS
+    meta(charset='UTF-8')
+    meta(name='description' content='Cards useful to introduce people, based in material design guidelines')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+
+    title introducing-people-cards
+
+    style
+      //- INCLUDE QUE CONTIENE LOS ESTILOS DE LA PARTE SUPERIOR DEL SITIO.
+      include ./primary-css/primary-css.css
+
+  body
+    //- include del header
+    include ./components/header/header.jade
+
+    //- include cards pequeños
+    include ./components/card/small-cards.jade
+
+    //- include cards grandes
+    include ./components/card/big-cards.jade
+
+    //- include del footer
+    include ./components/footer/footer.jade
+
+  //- IMPORT DE FUENTE ROBOTO GOOGLE FONTS
+  link(href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic' rel='stylesheet' type='text/css')
+
+  //- INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
+  link(rel='stylesheet' type='text/css' href='./public/css/main.min.css')
+
+  //- JAVASCRIPT
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(src='./public/js/main.min.js')

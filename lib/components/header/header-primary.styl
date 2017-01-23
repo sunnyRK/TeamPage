@@ -1,0 +1,70 @@
+.header
+  display block
+  height 7em
+  position relative
+  width 100%
+
+  &__nav
+    background-color darken($default-primary-color, 2.5%)
+    display block
+    height 2em
+    MaterialShadow(1)
+    text-align right
+    width 100%
+
+  &__link
+    box-sizing border-box
+    color rgba(white, 70%)
+    display block
+    float left
+    font-size 1.125rem
+    height 32px
+    padding 7px
+    text-align center
+    text-decoration none
+    transition all .3s linear
+    width 32px
+
+    &:hover
+      background-color rgba(white, .2)
+      color rgba(white, .95)
+
+    //link-icons
+    &:nth-child(1)::after
+      content '\f343'
+    &:nth-child(2)::after
+      content '\f360'
+    &:nth-child(3)::after
+      content '\f345'
+
+  &__info
+    background-color $default-primary-color
+    box-sizing border-box
+    display block
+    height 100px
+    margin-top 0
+    MaterialShadow(1)
+    padding 18px 0 22px 0
+    position relative
+    text-align center
+    width 100%
+    z-index -1
+
+  &__title
+    color rgba(white, .9)
+    display block
+    font-weight normal
+    margin 0 auto
+    position relative
+    width 210px
+
+@media screen and (max-width: 720px)
+  .header__nav
+    height 48px
+
+  .header__link
+    font-size 24px
+    height 48px
+    line-height 48px
+    padding 0
+    width 48px
